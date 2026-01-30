@@ -44,6 +44,7 @@
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
             tap-ms = <5>;
+            label = "SCROLL_ENCODER";
         };
 
         rgb_encoder: rgb_encoder {
@@ -57,6 +58,8 @@
             label = "TD_LAYER1";
             #binding-cells = <0>;
             bindings = <&mo 1>, <&to 1>, <&to 0>;
+
+            tapping-term-ms = <400>;
         };
 
         td_layer2: td_layer2 {
@@ -64,6 +67,15 @@
             label = "TD_LAYER2";
             #binding-cells = <0>;
             bindings = <&mo 2>, <&to 2>, <&to 0>;
+
+            tapping-term-ms = <400>;
+        };
+
+        rotate_sensor: rotate_sensor {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "ROTATE_SENSOR";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
         };
     };
 
@@ -73,21 +85,29 @@
         combo_layer_0 {
             bindings = <&to 0>;
             key-positions = <57 46>;
+            timeout-ms = <500>;
+            require-prior-idle-ms = <250>;
         };
 
         combo_layer_1 {
             bindings = <&to 1>;
             key-positions = <57 47>;
+            timeout-ms = <500>;
+            require-prior-idle-ms = <250>;
         };
 
         combo_layer_2 {
             bindings = <&to 2>;
             key-positions = <57 48>;
+            timeout-ms = <500>;
+            require-prior-idle-ms = <250>;
         };
 
         combo_layer_3 {
             bindings = <&to 3>;
             key-positions = <57 49>;
+            timeout-ms = <500>;
+            require-prior-idle-ms = <250>;
         };
 
         combo_sleep {
@@ -108,7 +128,7 @@
 &kp C_MUTE  &kp LALT  &kp LEFT_GUI  &kp GRAVE  &kp SPACE  &td_layer2    &kp ENTER        &kp LANG1  &kp SPACE  &td_layer1  &kp GRAVE  &kp DELETE
             >;
 
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>;
+            sensor-bindings = <&rotate_sensor MOVE_Y(-10) MOVE_Y(10)>;
             display-name = "MAIN";
         };
 
@@ -134,18 +154,18 @@
 &trans           &trans  &trans  &trans  &trans    &trans            &kp C_PLAY_PAUSE  &trans  &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&rotate_sensor SCRL_DOWN SCRL_UP>;
             label = "FUNC2";
         };
 
         SETTING {
             label = "SETTING";
             bindings = <
-&rgb_ug RGB_COLOR_HSB(159,24,61)  &rgb_ug RGB_COLOR_HSB(179,61,64)  &rgb_ug RGB_COLOR_HSB(260,38,63)  &rgb_ug RGB_COLOR_HSB(215,39,65)  &none            &none              &trans  &none  &none  &none  &none  &none  &bt BT_NXT
-&none                             &none                             &none                             &none                             &none            &none              &trans  &none  &none  &none  &none  &none  &bt BT_SEL 0
-&none                             &rgb_ug RGB_EFF                   &rgb_ug RGB_BRI                   &rgb_ug RGB_SPI                   &rgb_ug RGB_HUI  &rgb_ug RGB_SAI    &trans  &none  &none  &none  &none  &none  &none
-&rgb_ug RGB_TOG                   &rgb_ug RGB_OFF                   &rgb_ug RGB_BRD                   &rgb_ug RGB_SPD                   &rgb_ug RGB_HUD  &rgb_ug RGB_SAD    &trans  &none  &none  &none  &none  &none  &none
-&trans                            &none                             &none                             &none                             &none            &to 0              &trans  &to 0  &none  &none  &none  &none
+&rgb_ug RGB_COLOR_HSB(1,82,45)  &rgb_ug RGB_COLOR_HSB(179,61,64)  &rgb_ug RGB_COLOR_HSB(249,77,61)  &rgb_ug RGB_COLOR_HSB(215,39,65)  &rgb_ug RGB_COLOR_HSB(141,70,43)  &none              &trans  &none  &none  &none  &none  &none  &bt BT_NXT
+&none                           &none                             &none                             &none                             &none                             &none              &trans  &none  &none  &none  &none  &none  &bt BT_SEL 0
+&none                           &rgb_ug RGB_EFF                   &rgb_ug RGB_BRI                   &rgb_ug RGB_SPI                   &rgb_ug RGB_HUI                   &rgb_ug RGB_SAI    &trans  &none  &none  &none  &none  &none  &none
+&rgb_ug RGB_TOG                 &rgb_ug RGB_OFF                   &rgb_ug RGB_BRD                   &rgb_ug RGB_SPD                   &rgb_ug RGB_HUD                   &rgb_ug RGB_SAD    &trans  &none  &none  &none  &none  &none  &none
+&trans                          &none                             &none                             &none                             &none                             &to 0              &trans  &to 0  &none  &none  &none  &none
             >;
 
             sensor-bindings = <&rgb_encoder>;
