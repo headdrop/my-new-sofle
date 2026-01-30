@@ -145,7 +145,7 @@
 &none                             &none                             &none                             &none                             &none            &none              &trans  &none  &none  &none  &none  &none  &bt BT_SEL 0
 &none                             &rgb_ug RGB_EFF                   &rgb_ug RGB_BRI                   &rgb_ug RGB_SPI                   &rgb_ug RGB_HUI  &rgb_ug RGB_SAI    &trans  &none  &none  &none  &none  &none  &none
 &rgb_ug RGB_TOG                   &rgb_ug RGB_OFF                   &rgb_ug RGB_BRD                   &rgb_ug RGB_SPD                   &rgb_ug RGB_HUD  &rgb_ug RGB_SAD    &trans  &none  &none  &none  &none  &none  &none
-&trans                            &none                             &none                             &none                             &none            &to 0              &trans  &to 0  &none  &none  &none
+&trans                            &none                             &none                             &none                             &none            &to 0              &trans  &to 0  &none  &none  &none  &none
             >;
 
             sensor-bindings = <&rgb_encoder>;
