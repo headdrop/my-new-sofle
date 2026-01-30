@@ -196,11 +196,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   SETTING:
-  - RGB COLOR HSB(159,24,61)
+  - RGB COLOR HSB(1,82,45)
   - RGB COLOR HSB(179,61,64)
-  - RGB COLOR HSB(260,38,63)
+  - RGB COLOR HSB(249,77,61)
   - RGB COLOR HSB(215,39,65)
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB COLOR HSB(141,70,43)
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
