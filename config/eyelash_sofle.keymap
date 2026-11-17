@@ -161,10 +161,10 @@
         SETTING {
             label = "SETTING";
             bindings = <
-&rgb_ug RGB_COLOR_HSB(1,82,45)  &rgb_ug RGB_COLOR_HSB(179,61,64)  &rgb_ug RGB_COLOR_HSB(249,77,61)  &rgb_ug RGB_COLOR_HSB(215,39,65)  &rgb_ug RGB_COLOR_HSB(141,70,43)  &none              &trans  &none  &none  &none  &none  &none  &bt BT_NXT
-&none                           &none                             &none                             &none                             &none                             &none              &trans  &none  &none  &none  &none  &none  &bt BT_SEL 0
-&none                           &rgb_ug RGB_EFF                   &rgb_ug RGB_BRI                   &rgb_ug RGB_SPI                   &rgb_ug RGB_HUI                   &rgb_ug RGB_SAI    &trans  &none  &none  &none  &none  &none  &none
-&rgb_ug RGB_TOG                 &rgb_ug RGB_OFF                   &rgb_ug RGB_BRD                   &rgb_ug RGB_SPD                   &rgb_ug RGB_HUD                   &rgb_ug RGB_SAD    &trans  &none  &none  &none  &none  &none  &none
+&rgb_ug RGB_COLOR_HSB(1,82,45)  &rgb_ug RGB_COLOR_HSB(179,61,64)  &rgb_ug RGB_COLOR_HSB(249,77,61)  &rgb_ug RGB_COLOR_HSB(215,39,65)  &rgb_ug RGB_COLOR_HSB(141,70,43)  &none              &trans  &none  &none  &none  &none  &bt BT_CLR  &bt BT_NXT
+&none                           &none                             &none                             &none                             &none                             &none              &trans  &none  &none  &none  &none  &none       &bt BT_SEL 0
+&none                           &none                             &rgb_ug RGB_BRI                   &rgb_ug RGB_SPI                   &rgb_ug RGB_HUI                   &rgb_ug RGB_SAI    &trans  &none  &none  &none  &none  &none       &none
+&rgb_ug RGB_TOG                 &rgb_ug RGB_EFF                   &rgb_ug RGB_BRD                   &rgb_ug RGB_SPD                   &rgb_ug RGB_HUD                   &rgb_ug RGB_SAD    &trans  &none  &none  &none  &none  &none       &none
 &trans                          &none                             &none                             &none                             &none                             &to 0              &trans  &to 0  &none  &none  &none  &none
             >;
 
